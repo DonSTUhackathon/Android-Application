@@ -21,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.main_activity);
+
         WebApp = findViewById(R.id.WebApp);
         WebApp.getSettings().setJavaScriptEnabled(true);
         WebApp.setWebViewClient(new WebViewClient());
-        WebApp.loadUrl("https://github.com");
+        WebApp.loadUrl("https://hackaton-ogetto.space/");
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
